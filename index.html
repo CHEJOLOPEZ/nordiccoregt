@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CM7959K8WD"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -31,13 +31,11 @@
       --amarillo: #F6C745;
       --oscuro: #0B1F33;
       --gris: #F5F7FA;
-      --blanco: #FFFFFF;
     }
 
     body {
       font-family: 'Montserrat', Arial, sans-serif;
       color: var(--oscuro);
-      background: var(--blanco);
       scroll-behavior: smooth;
     }
 
@@ -57,55 +55,6 @@
 
     .nav-link:hover {
       color: var(--azul);
-    }
-
-    .hero {
-      min-height: 92vh;
-      background:
-        linear-gradient(rgba(11,31,51,0.62), rgba(11,31,51,0.72)),
-        url("madera-1.jpg?v=5");
-      background-size: cover;
-      background-position: center;
-      color: white;
-      display: flex;
-      align-items: center;
-      position: relative;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 8px;
-      background: var(--amarillo);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.5rem, 6vw, 5.6rem);
-      font-weight: 800;
-      line-height: 1.05;
-    }
-
-    .hero p {
-      max-width: 720px;
-      font-size: 1.15rem;
-    }
-
-    .badge-nordic {
-      background: var(--amarillo);
-      color: var(--oscuro);
-      padding: 10px 16px;
-      border-radius: 999px;
-      font-weight: 700;
-      display: inline-block;
-      margin-bottom: 20px;
     }
 
     .btn-nordic {
@@ -138,6 +87,59 @@
       color: var(--oscuro);
     }
 
+    .hero-slide {
+      min-height: 92vh;
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero-slide::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 8px;
+      background: var(--amarillo);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-slide h1 {
+      font-size: clamp(2.4rem, 6vw, 5.6rem);
+      font-weight: 800;
+      line-height: 1.05;
+      max-width: 900px;
+    }
+
+    .hero-slide p {
+      max-width: 720px;
+      font-size: 1.15rem;
+    }
+
+    .badge-nordic {
+      background: var(--amarillo);
+      color: var(--oscuro);
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .carousel-indicators [data-bs-target] {
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+    }
+
     .section-padding {
       padding: 90px 0;
     }
@@ -152,6 +154,10 @@
       color: #5C6B7A;
       max-width: 760px;
       margin: 0 auto;
+    }
+
+    .highlight-section {
+      background: var(--gris);
     }
 
     .product-card,
@@ -180,10 +186,6 @@
       margin-bottom: 18px;
     }
 
-    .highlight-section {
-      background: var(--gris);
-    }
-
     .blue-section {
       background: var(--azul);
       color: white;
@@ -199,7 +201,6 @@
 
     .process-card {
       padding: 32px;
-      position: relative;
     }
 
     .process-number {
@@ -235,14 +236,10 @@
       padding: 30px;
     }
 
-    .spec-box ul {
-      margin-bottom: 0;
-    }
-
     .contact-section {
       background:
         linear-gradient(rgba(21,79,142,0.92), rgba(21,79,142,0.92)),
-        url("horno-secado.jpg?v=5");
+        url("horno-secado.jpg?v=6");
       background-size: cover;
       background-position: center;
       color: white;
@@ -282,12 +279,12 @@
     }
 
     @media (max-width: 768px) {
-      .hero {
+      .hero-slide {
         min-height: 82vh;
         text-align: center;
       }
 
-      .hero p {
+      .hero-slide p {
         margin-left: auto;
         margin-right: auto;
       }
@@ -300,13 +297,6 @@
       .gallery-img {
         height: 260px;
       }
-
-      .floating-whatsapp {
-        right: 14px;
-        bottom: 14px;
-        padding: 12px 16px;
-        font-size: 0.9rem;
-      }
     }
   </style>
 </head>
@@ -316,7 +306,7 @@
 <nav class="navbar navbar-expand-lg shadow-sm sticky-top">
   <div class="container">
     <a class="navbar-brand" href="#">
-      <img src="logo.png?v=5" class="logo" alt="Nordic Core GT">
+      <img src="logo.png?v=6" class="logo" alt="Nordic Core GT">
     </a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
@@ -338,26 +328,80 @@
   </div>
 </nav>
 
-<header class="hero">
-  <div class="container hero-content">
-    <span class="badge-nordic">Madera de calidad en Guatemala</span>
-    <h1>Tableros Finger Joint de Teca</h1>
-    <p class="lead mt-4">
-      Fabricamos y comercializamos soluciones de madera con procesos de secado en horno,
-      calidad controlada y disponibilidad local para proyectos profesionales.
-    </p>
-    <div class="mt-4 d-flex gap-3 flex-wrap">
-      <a href="https://wa.me/50230100398" class="btn btn-yellow btn-lg">Solicitar cotización</a>
-      <a href="#productos" class="btn btn-outline-light btn-lg rounded-pill px-4">Ver productos</a>
-    </div>
+<header id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
   </div>
+
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+      <section class="hero-slide" style="background-image: linear-gradient(rgba(11,31,51,0.55), rgba(11,31,51,0.72)), url('madera-1.jpg?v=6');">
+        <div class="container hero-content">
+          <span class="badge-nordic">Madera de calidad en Guatemala</span>
+          <h1>Tableros Finger Joint de Teca</h1>
+          <p class="lead mt-4">
+            Fabricamos y comercializamos soluciones de madera con secado en horno,
+            calidad controlada y disponibilidad local.
+          </p>
+          <div class="mt-4 d-flex gap-3 flex-wrap">
+            <a href="https://wa.me/50230100398" class="btn btn-yellow btn-lg">Solicitar cotización</a>
+            <a href="#productos" class="btn btn-outline-light btn-lg rounded-pill px-4">Ver productos</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="carousel-item">
+      <section class="hero-slide" style="background-image: linear-gradient(rgba(11,31,51,0.55), rgba(11,31,51,0.72)), url('horno-secado.jpg?v=6');">
+        <div class="container hero-content">
+          <span class="badge-nordic">Proceso controlado</span>
+          <h1>Madera seca en horno</h1>
+          <p class="lead mt-4">
+            El secado controlado mejora la estabilidad, resistencia y acabado del producto final.
+          </p>
+          <div class="mt-4">
+            <a href="#proceso" class="btn btn-yellow btn-lg">Conocer proceso</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="carousel-item">
+      <section class="hero-slide" style="background-image: linear-gradient(rgba(11,31,51,0.55), rgba(11,31,51,0.72)), url('tablero-teca.png?v=6');">
+        <div class="container hero-content">
+          <span class="badge-nordic">Producto terminado</span>
+          <h1>Soluciones para muebles, carpintería y arquitectura</h1>
+          <p class="lead mt-4">
+            Tableros ideales para cocinas, closets, puertas, cubiertas, decoración y proyectos profesionales.
+          </p>
+          <div class="mt-4">
+            <a href="#galeria" class="btn btn-yellow btn-lg">Ver galería</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+
 </header>
 
 <section id="empresa" class="section-padding">
   <div class="container">
     <div class="row align-items-center g-5">
       <div class="col-lg-6">
-        <img src="logo-2.jpg?v=5" class="img-fluid rounded-4 shadow" alt="Nordic Core GT Tableros Finger Joint">
+        <img src="logo-2.jpg?v=6" class="img-fluid rounded-4 shadow" alt="Nordic Core GT Tableros Finger Joint">
       </div>
 
       <div class="col-lg-6">
@@ -388,7 +432,7 @@
     <div class="row g-5 align-items-center">
       <div class="col-lg-6">
         <div class="product-card">
-          <img src="tablero-teca.png?v=5" class="w-100" alt="Tablero Finger Joint de Teca en Guatemala">
+          <img src="tablero-teca.png?v=6" class="w-100" alt="Tablero Finger Joint de Teca en Guatemala">
         </div>
       </div>
 
@@ -552,17 +596,17 @@
 
     <div class="row g-4">
       <div class="col-md-4">
-        <img src="madera-1.jpg?v=5" class="gallery-img" alt="Madera seleccionada en Guatemala">
+        <img src="madera-1.jpg?v=6" class="gallery-img" alt="Madera seleccionada en Guatemala">
         <h4 class="mt-3 fw-bold">Madera seleccionada</h4>
       </div>
 
       <div class="col-md-4">
-        <img src="horno-secado.jpg?v=5" class="gallery-img" alt="Horno de secado de madera">
+        <img src="horno-secado.jpg?v=6" class="gallery-img" alt="Horno de secado de madera">
         <h4 class="mt-3 fw-bold">Secado en horno</h4>
       </div>
 
       <div class="col-md-4">
-        <img src="tablero-teca.png?v=5" class="gallery-img" alt="Tablero Finger Joint de teca">
+        <img src="tablero-teca.png?v=6" class="gallery-img" alt="Tablero Finger Joint de teca">
         <h4 class="mt-3 fw-bold">Tableros Finger Joint</h4>
       </div>
     </div>
@@ -598,7 +642,7 @@
   <div class="container">
     <div class="row g-4">
       <div class="col-md-4">
-        <img src="logo.png?v=5" class="logo mb-3" alt="Nordic Core GT">
+        <img src="logo.png?v=6" class="logo mb-3" alt="Nordic Core GT">
         <p>Core engineered wood system. Tableros Finger Joint de teca para proyectos profesionales.</p>
       </div>
 
