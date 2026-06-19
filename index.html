@@ -13,112 +13,253 @@
   <meta charset="UTF-8">
   <title>Tableros Finger Joint de Teca en Guatemala | Nordic Core GT</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Fabricación y comercialización de tableros Finger Joint de teca en Guatemala. Madera seca en horno, certificación FSC®, alta calidad para muebles, carpintería, construcción y proyectos arquitectónicos.">
+  <meta name="description" content="Nordic Core GT fabrica y comercializa tableros Finger Joint de teca en Guatemala. Madera seca en horno, certificación FSC®, calidad para muebles, carpintería, construcción y arquitectura.">
+
+  <meta property="og:title" content="Nordic Core GT | Tableros Finger Joint de Teca">
+  <meta property="og:description" content="Madera seca en horno, tableros Finger Joint de teca y soluciones de madera para proyectos profesionales en Guatemala.">
+  <meta property="og:image" content="https://nordiccoregt.com/logo-2.jpg">
+  <meta property="og:url" content="https://nordiccoregt.com">
+  <meta property="og:type" content="website">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --azul: #0054a6;
-      --amarillo: #f7c948;
-      --oscuro: #102033;
+      --azul: #154F8E;
+      --amarillo: #F6C745;
+      --oscuro: #0B1F33;
+      --gris: #F5F7FA;
+      --blanco: #FFFFFF;
     }
 
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Montserrat', Arial, sans-serif;
       color: var(--oscuro);
+      background: var(--blanco);
+      scroll-behavior: smooth;
     }
 
     .navbar {
-      background: #ffffff;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(8px);
     }
 
     .logo {
-      max-height: 65px;
+      max-height: 62px;
+    }
+
+    .nav-link {
+      font-weight: 600;
+      color: var(--oscuro);
+    }
+
+    .nav-link:hover {
+      color: var(--azul);
     }
 
     .hero {
-      min-height: 85vh;
+      min-height: 92vh;
       background:
-        linear-gradient(rgba(0, 45, 90, 0.72), rgba(0, 45, 90, 0.72)),
-        url("madera-1.jpg?v=4");
+        linear-gradient(rgba(11,31,51,0.62), rgba(11,31,51,0.72)),
+        url("madera-1.jpg?v=5");
       background-size: cover;
       background-position: center;
       color: white;
       display: flex;
       align-items: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 8px;
+      background: var(--amarillo);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
     }
 
     .hero h1 {
-      font-size: clamp(2.4rem, 6vw, 5rem);
+      font-size: clamp(2.5rem, 6vw, 5.6rem);
       font-weight: 800;
+      line-height: 1.05;
     }
 
-    .hero .badge {
+    .hero p {
+      max-width: 720px;
+      font-size: 1.15rem;
+    }
+
+    .badge-nordic {
       background: var(--amarillo);
       color: var(--oscuro);
-      font-size: 1rem;
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 20px;
     }
 
-    .btn-whatsapp {
-      background: #25D366;
+    .btn-nordic {
+      background: var(--azul);
       color: white;
-      font-weight: bold;
-      border: none;
+      border: 2px solid var(--azul);
+      font-weight: 700;
+      padding: 13px 28px;
+      border-radius: 999px;
     }
 
-    .btn-whatsapp:hover {
-      background: #1ebe5d;
+    .btn-nordic:hover {
+      background: #0f3d70;
+      border-color: #0f3d70;
       color: white;
+    }
+
+    .btn-yellow {
+      background: var(--amarillo);
+      color: var(--oscuro);
+      border: 2px solid var(--amarillo);
+      font-weight: 800;
+      padding: 13px 28px;
+      border-radius: 999px;
+    }
+
+    .btn-yellow:hover {
+      background: #e5b833;
+      border-color: #e5b833;
+      color: var(--oscuro);
+    }
+
+    .section-padding {
+      padding: 90px 0;
     }
 
     .section-title {
       color: var(--azul);
       font-weight: 800;
+      margin-bottom: 18px;
     }
 
-    .product-card {
+    .section-subtitle {
+      color: #5C6B7A;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .product-card,
+    .info-card,
+    .process-card {
       border: none;
-      border-radius: 18px;
+      border-radius: 24px;
       overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.10);
+      background: white;
+      height: 100%;
     }
 
     .product-card img {
-      height: 320px;
+      height: 420px;
       object-fit: cover;
     }
 
-    .seo-section {
-      background: #ffffff;
+    .info-card {
+      padding: 35px;
     }
 
-    .seo-box {
-      background: #f8f9fa;
-      border-radius: 18px;
-      padding: 30px;
-      height: 100%;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    .info-card i {
+      font-size: 2.2rem;
+      color: var(--azul);
+      margin-bottom: 18px;
     }
 
-    .feature-box {
-      background: #f8f9fa;
-      border-radius: 18px;
-      padding: 25px;
-      height: 100%;
+    .highlight-section {
+      background: var(--gris);
+    }
+
+    .blue-section {
+      background: var(--azul);
+      color: white;
+    }
+
+    .blue-section .section-title {
+      color: white;
+    }
+
+    .blue-section .section-subtitle {
+      color: rgba(255,255,255,0.85);
+    }
+
+    .process-card {
+      padding: 32px;
+      position: relative;
+    }
+
+    .process-number {
+      width: 48px;
+      height: 48px;
+      background: var(--amarillo);
+      color: var(--oscuro);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      margin-bottom: 18px;
     }
 
     .gallery-img {
       width: 100%;
-      height: 280px;
+      height: 330px;
       object-fit: cover;
-      border-radius: 18px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+      border-radius: 24px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.14);
+      transition: transform .3s ease;
+    }
+
+    .gallery-img:hover {
+      transform: scale(1.03);
+    }
+
+    .spec-box {
+      background: var(--azul);
+      color: white;
+      border-radius: 22px;
+      padding: 30px;
+    }
+
+    .spec-box ul {
+      margin-bottom: 0;
     }
 
     .contact-section {
-      background: var(--azul);
+      background:
+        linear-gradient(rgba(21,79,142,0.92), rgba(21,79,142,0.92)),
+        url("horno-secado.jpg?v=5");
+      background-size: cover;
+      background-position: center;
       color: white;
+    }
+
+    .footer {
+      background: #061A30;
+      color: white;
+    }
+
+    .footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: var(--amarillo);
     }
 
     .floating-whatsapp {
@@ -127,17 +268,45 @@
       bottom: 20px;
       background: #25D366;
       color: white;
-      padding: 14px 18px;
-      border-radius: 50px;
-      font-weight: bold;
+      padding: 14px 20px;
+      border-radius: 999px;
+      font-weight: 800;
       text-decoration: none;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-      z-index: 999;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.28);
+      z-index: 9999;
     }
 
-    footer {
-      background: #061a30;
+    .floating-whatsapp:hover {
+      background: #1ebe5d;
       color: white;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        min-height: 82vh;
+        text-align: center;
+      }
+
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .section-padding {
+        padding: 65px 0;
+      }
+
+      .product-card img,
+      .gallery-img {
+        height: 260px;
+      }
+
+      .floating-whatsapp {
+        right: 14px;
+        bottom: 14px;
+        padding: 12px 16px;
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
@@ -147,7 +316,7 @@
 <nav class="navbar navbar-expand-lg shadow-sm sticky-top">
   <div class="container">
     <a class="navbar-brand" href="#">
-      <img src="logo.png?v=4" class="logo" alt="Nordic Core GT - Tableros Finger Joint de Teca">
+      <img src="logo.png?v=5" class="logo" alt="Nordic Core GT">
     </a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
@@ -155,193 +324,310 @@
     </button>
 
     <div class="collapse navbar-collapse" id="menu">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+      <ul class="navbar-nav ms-auto align-items-lg-center">
         <li class="nav-item"><a class="nav-link" href="#empresa">Empresa</a></li>
+        <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
         <li class="nav-item"><a class="nav-link" href="#proceso">Proceso</a></li>
         <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
         <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        <li class="nav-item ms-lg-3">
+          <a class="btn btn-yellow" href="https://wa.me/50230100398">Cotizar</a>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
 
-<section class="hero">
-  <div class="container">
-    <span class="badge mb-3">Madera de calidad en Guatemala</span>
+<header class="hero">
+  <div class="container hero-content">
+    <span class="badge-nordic">Madera de calidad en Guatemala</span>
     <h1>Tableros Finger Joint de Teca</h1>
-    <p class="lead col-lg-7">
-      Madera seca en horno, fabricación profesional y productos diseñados para carpintería,
-      muebles, construcción, decoración e industria.
+    <p class="lead mt-4">
+      Fabricamos y comercializamos soluciones de madera con procesos de secado en horno,
+      calidad controlada y disponibilidad local para proyectos profesionales.
     </p>
-    <a href="https://wa.me/50230100398" class="btn btn-whatsapp btn-lg mt-3">
-      Solicitar cotización por WhatsApp
-    </a>
+    <div class="mt-4 d-flex gap-3 flex-wrap">
+      <a href="https://wa.me/50230100398" class="btn btn-yellow btn-lg">Solicitar cotización</a>
+      <a href="#productos" class="btn btn-outline-light btn-lg rounded-pill px-4">Ver productos</a>
+    </div>
   </div>
-</section>
+</header>
 
-<section id="productos" class="container py-5">
-  <div class="text-center mb-5">
-    <h2 class="section-title">Nuestros Productos</h2>
-    <p>Tableros Finger Joint de Teca fabricados con altos estándares de calidad.</p>
-  </div>
+<section id="empresa" class="section-padding">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <img src="logo-2.jpg?v=5" class="img-fluid rounded-4 shadow" alt="Nordic Core GT Tableros Finger Joint">
+      </div>
 
-  <div class="row g-4 align-items-center">
-    <div class="col-lg-6">
-      <div class="card product-card">
-        <img src="tablero-teca.png?v=4" class="card-img-top" alt="Tablero Finger Joint de Teca en Guatemala">
+      <div class="col-lg-6">
+        <h2 class="section-title">Nordic Core GT</h2>
+        <p class="lead">
+          Somos una empresa guatemalteca especializada en la fabricación y comercialización de tableros Finger Joint de teca.
+        </p>
+        <p>
+          Trabajamos con madera cuidadosamente seleccionada y procesos de secado en horno para garantizar estabilidad,
+          resistencia y calidad en cada producto. Atendemos proyectos de carpintería, muebles, construcción,
+          diseño interior y arquitectura.
+        </p>
+        <a href="#contacto" class="btn btn-nordic mt-3">Contactar ahora</a>
       </div>
     </div>
-
-    <div class="col-lg-6">
-      <h3 class="fw-bold">Tablero Finger Joint de Teca</h3>
-      <p>
-        Producto ideal para proyectos que requieren estabilidad, resistencia y excelente presentación.
-      </p>
-
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">✅ Madera seca en horno</li>
-        <li class="list-group-item">✅ Certificación FSC®</li>
-        <li class="list-group-item">✅ Medidas: 4' x 8' y 2' x 8'</li>
-        <li class="list-group-item">✅ Espesores: 5/8", 3/4" y 1"</li>
-      </ul>
-
-      <a href="https://wa.me/50230100398" class="btn btn-primary btn-lg mt-4">
-        Consultar disponibilidad
-      </a>
-    </div>
   </div>
 </section>
 
-<section id="empresa" class="seo-section container py-5">
-  <div class="row">
-    <div class="col-lg-10 mx-auto">
-      <h2 class="section-title text-center mb-4">Nordic Core GT</h2>
-
-      <p class="lead">
-        Nordic Core GT es una empresa guatemalteca especializada en la fabricación y comercialización de tableros Finger Joint de teca. Trabajamos con madera cuidadosamente seleccionada y procesos de secado en horno que garantizan estabilidad, resistencia y calidad para proyectos residenciales, comerciales e industriales.
+<section id="productos" class="section-padding highlight-section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Nuestros Productos</h2>
+      <p class="section-subtitle">
+        Tableros Finger Joint de teca fabricados para ofrecer estabilidad, resistencia y excelente acabado.
       </p>
+    </div>
 
-      <p>
-        Nuestro compromiso es ofrecer productos de alto valor para carpinterías, fabricantes de muebles, arquitectos, diseñadores y constructores que buscan materiales duraderos, estéticos y sostenibles. Los tableros Finger Joint de teca destacan por su excelente acabado, uniformidad y aprovechamiento eficiente de la madera.
-      </p>
-
-      <div class="row g-4 mt-4">
-        <div class="col-md-6">
-          <div class="seo-box">
-            <h3>Aplicaciones</h3>
-            <ul>
-              <li>Muebles residenciales y comerciales</li>
-              <li>Cocinas y gabinetes</li>
-              <li>Closets y vestidores</li>
-              <li>Puertas y marcos</li>
-              <li>Cubiertas y superficies decorativas</li>
-              <li>Proyectos arquitectónicos</li>
-              <li>Decoración interior</li>
-              <li>Carpintería especializada</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="seo-box">
-            <h3>Ventajas</h3>
-            <ul>
-              <li>Madera seca en horno</li>
-              <li>Certificación FSC®</li>
-              <li>Excelente estabilidad dimensional</li>
-              <li>Alta resistencia estructural</li>
-              <li>Excelente acabado superficial</li>
-              <li>Mayor aprovechamiento de la madera</li>
-              <li>Disponibilidad local en Guatemala</li>
-              <li>Producto ideal para proyectos de larga duración</li>
-            </ul>
-          </div>
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6">
+        <div class="product-card">
+          <img src="tablero-teca.png?v=5" class="w-100" alt="Tablero Finger Joint de Teca en Guatemala">
         </div>
       </div>
 
+      <div class="col-lg-6">
+        <h3 class="fw-bold mb-3">Tablero Finger Joint de Teca</h3>
+        <p>
+          Producto ideal para fabricantes de muebles, carpinterías, constructores, arquitectos y diseñadores que buscan
+          una madera estable, estética y lista para proyectos de alto valor.
+        </p>
+
+        <div class="spec-box mt-4">
+          <h4 class="fw-bold mb-3">Especificaciones</h4>
+          <ul>
+            <li>Madera seca en horno</li>
+            <li>Certificación FSC®</li>
+            <li>Medidas disponibles: 4' x 8' y 2' x 8'</li>
+            <li>Espesores: 5/8", 3/4" y 1"</li>
+          </ul>
+        </div>
+
+        <a href="https://wa.me/50230100398" class="btn btn-yellow mt-4">Consultar disponibilidad</a>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="proceso" class="bg-light py-5">
+<section class="section-padding">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Aplicaciones</h2>
+      <p class="section-subtitle">
+        Nuestros tableros Finger Joint de teca son una solución versátil para proyectos residenciales,
+        comerciales e industriales.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="info-card text-center">
+          <i class="bi bi-house-door"></i>
+          <h5 class="fw-bold">Muebles</h5>
+          <p>Muebles residenciales, comerciales y piezas de alto acabado.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="info-card text-center">
+          <i class="bi bi-grid-3x3-gap"></i>
+          <h5 class="fw-bold">Cocinas y closets</h5>
+          <p>Gabinetes, closets, vestidores y soluciones interiores.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="info-card text-center">
+          <i class="bi bi-door-open"></i>
+          <h5 class="fw-bold">Puertas y marcos</h5>
+          <p>Elementos de carpintería con resistencia y presentación.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="info-card text-center">
+          <i class="bi bi-building"></i>
+          <h5 class="fw-bold">Arquitectura</h5>
+          <p>Proyectos arquitectónicos, decoración y superficies interiores.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="proceso" class="section-padding blue-section">
   <div class="container">
     <div class="text-center mb-5">
       <h2 class="section-title">Calidad y Proceso</h2>
-      <p>Controlamos cada etapa para entregar madera confiable y lista para trabajar.</p>
+      <p class="section-subtitle">
+        Controlamos cada etapa del proceso para entregar productos confiables y listos para trabajar.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="process-card text-dark">
+          <div class="process-number">1</div>
+          <h5 class="fw-bold">Selección</h5>
+          <p>Seleccionamos madera adecuada para fabricar tableros de buena apariencia y resistencia.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="process-card text-dark">
+          <div class="process-number">2</div>
+          <h5 class="fw-bold">Secado en horno</h5>
+          <p>Reducimos humedad y mejoramos la estabilidad dimensional de la madera.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="process-card text-dark">
+          <div class="process-number">3</div>
+          <h5 class="fw-bold">Finger Joint</h5>
+          <p>Unimos piezas cuidadosamente para obtener tableros funcionales y duraderos.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="process-card text-dark">
+          <div class="process-number">4</div>
+          <h5 class="fw-bold">Acabado</h5>
+          <p>Preparamos el producto final para proyectos de carpintería, muebles y construcción.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Ventajas Nordic Core GT</h2>
+      <p class="section-subtitle">
+        Productos diseñados para quienes buscan calidad, estabilidad y disponibilidad local en Guatemala.
+      </p>
     </div>
 
     <div class="row g-4">
       <div class="col-md-4">
-        <div class="feature-box">
-          <h4>1. Selección de madera</h4>
-          <p>Seleccionamos madera adecuada para fabricar tableros resistentes y de buena apariencia.</p>
+        <div class="info-card">
+          <i class="bi bi-moisture"></i>
+          <h4>Madera seca en horno</h4>
+          <p>Proceso controlado para mejorar estabilidad, resistencia y comportamiento del producto.</p>
         </div>
       </div>
 
       <div class="col-md-4">
-        <div class="feature-box">
-          <h4>2. Secado en horno</h4>
-          <p>El secado controlado mejora la estabilidad, reduce humedad y prepara la madera para uso profesional.</p>
+        <div class="info-card">
+          <i class="bi bi-patch-check"></i>
+          <h4>Certificación FSC®</h4>
+          <p>Compromiso con el aprovechamiento responsable y sostenible de la madera.</p>
         </div>
       </div>
 
       <div class="col-md-4">
-        <div class="feature-box">
-          <h4>3. Tableros Finger Joint</h4>
-          <p>Unimos piezas cuidadosamente para obtener tableros funcionales, estéticos y duraderos.</p>
+        <div class="info-card">
+          <i class="bi bi-truck"></i>
+          <h4>Disponibilidad local</h4>
+          <p>Atención en Guatemala para proyectos de carpintería, construcción e industria.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="galeria" class="container py-5">
-  <div class="text-center mb-5">
-    <h2 class="section-title">Galería</h2>
-    <p>Madera, hornos de secado y producto terminado.</p>
+<section id="galeria" class="section-padding highlight-section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Galería</h2>
+      <p class="section-subtitle">Madera, hornos de secado y producto terminado.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <img src="madera-1.jpg?v=5" class="gallery-img" alt="Madera seleccionada en Guatemala">
+        <h4 class="mt-3 fw-bold">Madera seleccionada</h4>
+      </div>
+
+      <div class="col-md-4">
+        <img src="horno-secado.jpg?v=5" class="gallery-img" alt="Horno de secado de madera">
+        <h4 class="mt-3 fw-bold">Secado en horno</h4>
+      </div>
+
+      <div class="col-md-4">
+        <img src="tablero-teca.png?v=5" class="gallery-img" alt="Tablero Finger Joint de teca">
+        <h4 class="mt-3 fw-bold">Tableros Finger Joint</h4>
+      </div>
+    </div>
   </div>
+</section>
 
-  <div class="row g-4">
-    <div class="col-md-4">
-      <img src="madera-1.jpg?v=4" class="gallery-img" alt="Madera seleccionada para tableros Finger Joint de teca">
-      <h4 class="mt-3">Madera seleccionada</h4>
-    </div>
+<section id="contacto" class="section-padding contact-section">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-7">
+        <h2 class="fw-bold display-5">Solicita información o cotización</h2>
+        <p class="lead">
+          Estamos listos para atender proyectos de carpintería, muebles, construcción,
+          arquitectura e industria en Guatemala.
+        </p>
+      </div>
 
-    <div class="col-md-4">
-      <img src="horno-secado.jpg?v=4" class="gallery-img" alt="Horno de secado de madera para tableros de teca">
-      <h4 class="mt-3">Secado en horno</h4>
-    </div>
-
-    <div class="col-md-4">
-      <img src="tablero-teca.png?v=4" class="gallery-img" alt="Tableros Finger Joint de teca fabricados en Guatemala">
-      <h4 class="mt-3">Tableros Finger Joint</h4>
+      <div class="col-lg-5">
+        <div class="bg-white text-dark rounded-4 p-4 shadow">
+          <h4 class="fw-bold mb-3">Contacto</h4>
+          <p><i class="bi bi-whatsapp text-success"></i> <strong>WhatsApp:</strong> 3010-0398</p>
+          <p><i class="bi bi-envelope"></i> <strong>Correo:</strong> ventas@nordiccoregt.com</p>
+          <p><i class="bi bi-geo-alt"></i> <strong>Ubicación:</strong> El Rancho, Guatemala</p>
+          <p><i class="bi bi-instagram"></i> <strong>Instagram:</strong> @nordiccore.gt</p>
+          <a href="https://wa.me/50230100398" class="btn btn-nordic w-100 mt-3">Escribir por WhatsApp</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="contacto" class="contact-section py-5">
-  <div class="container text-center">
-    <h2 class="fw-bold">Contáctanos</h2>
-    <p class="lead">Solicita información, disponibilidad o cotización.</p>
+<footer class="footer py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <img src="logo.png?v=5" class="logo mb-3" alt="Nordic Core GT">
+        <p>Core engineered wood system. Tableros Finger Joint de teca para proyectos profesionales.</p>
+      </div>
 
-    <p><strong>WhatsApp:</strong> 3010-0398</p>
-    <p><strong>Correo:</strong> ventas@nordiccoregt.com</p>
-    <p><strong>Ubicación:</strong> El Rancho, Guatemala</p>
-    <p><strong>Instagram:</strong> @nordiccore.gt</p>
+      <div class="col-md-4">
+        <h5 class="fw-bold">Enlaces</h5>
+        <p><a href="#empresa">Empresa</a></p>
+        <p><a href="#productos">Productos</a></p>
+        <p><a href="#proceso">Proceso</a></p>
+        <p><a href="#contacto">Contacto</a></p>
+      </div>
 
-    <a href="https://wa.me/50230100398" class="btn btn-whatsapp btn-lg mt-3">
-      Escribir por WhatsApp
-    </a>
+      <div class="col-md-4">
+        <h5 class="fw-bold">Información</h5>
+        <p>WhatsApp: 3010-0398</p>
+        <p>ventas@nordiccoregt.com</p>
+        <p>El Rancho, Guatemala</p>
+      </div>
+    </div>
+
+    <hr class="border-light">
+
+    <div class="text-center">
+      <p class="mb-0">© 2026 Nordic Core GT. Todos los derechos reservados.</p>
+    </div>
   </div>
-</section>
-
-<footer class="text-center py-4">
-  <p class="mb-0">© 2026 Nordic Core GT. Todos los derechos reservados.</p>
 </footer>
 
 <a href="https://wa.me/50230100398" class="floating-whatsapp">
-  WhatsApp
+  <i class="bi bi-whatsapp"></i> WhatsApp
 </a>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
