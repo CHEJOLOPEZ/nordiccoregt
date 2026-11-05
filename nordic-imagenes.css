@@ -1,0 +1,9 @@
+/* Complemento: cargar después del style.css actual. */
+.nc-product-image{display:block;width:100%;height:auto;max-height:620px;object-fit:contain;margin:auto;border-radius:20px;background:#fff}
+.nc-gallery-product{object-fit:contain!important;background:#fff}
+.nc-document-image{display:block;width:100%;max-width:600px;height:auto;margin:auto;border-radius:16px;box-shadow:0 16px 48px #152b3b1a}
+.nc-promo-image{display:block;width:100%;max-width:440px;height:auto;margin:auto;border-radius:20px;box-shadow:0 16px 48px #152b3b1a}
+.nc-eyebrow{display:block;color:#254d59;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.78rem;margin-bottom:14px}
+.nc-added-section{padding-block:80px}section[id]{scroll-margin-top:110px}
+.nc-added-section a:focus-visible{outline:3px solid #245b93;outline-offset:5px}
+@media(max-width:767px){.nc-added-section{padding-block:48px}.nc-product-image{max-height:450px}.nc-document-image{max-width:100%}.nc-promo-image{max-width:360px}.nc-added-section .btn{white-space:normal}}
